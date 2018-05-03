@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">EspressoTest</string>
+    <string name="button_test_text_view">Test Text View</string>
+    <string name="title_text_view_example">Title Text View Example</string>
+    <string name="title_subtitle_1">Subtitulo 1</string>
+    <string name="title_subtitle_2">Subtitulo 2</string>
+    <string name="edittext_text">Edit me</string>
+    <string name="hint_edittext_text">My Hint</string>
+    <string name="accessibility_edittext">accessibility_edittext</string>
+    <string name="button_test_edittext">EditText</string>
+    <string name="button_test_button">Buttons</string>
+    <string name="button_text">Button Test</string>
+    <string name="button_test_checkbox">checkbox</string>
+    <string name="button_test_spinner">spinner</string>
+    <string name="button_test_recycler_view">RecyclerView</string>
+    <string name="button_test_image_view">ImageView</string>
+    <string name="button_test_list_view">List View</string>
+    <string name="button_test_idle_res">Idle Resources</string>
+    <string name="desciption_text_view_example">If we tap on te title then we show the subtitle or hide it</string>
+    <string name="desciption_edittext_view_example">An EditText that once it reachs 8 characters it gets disabled, and show a message</string>
+    <string name="desciption_button_example">When the button is clicked, it displays a counter</string>
+    <string name="clicked">Clicked %s</string>
+    <string name="desciption_checkbox_view_example">Checkbox</string>
+    <string name="desciption_image_view_example">Tap on each button change the image view drawable</string>
+    <string name="desciption_spinner_view_example">Spinner example, select one and then show the selection</string>
+    <string name="nothing">Nothing</string>
+    <string name="select_one">Select One</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="desciption_idlingres_view_example">Show how idling resources works with AsynTask and Threads</string>
+    <string name="async_task_completed">AsyncTask completed</string>
+    <string name="thread_completed">Thread Completed</string>
+    <array name="array_spinner">
+        <item>@string/select_one</item>
+        <item>@string/item_1</item>
+        <item>@string/item_2</item>
+        <item>@string/item_3</item>
+    </array>
+
+</resources>
