@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.test.espresso.idling.CountingIdlingResource;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -15,6 +16,9 @@ import com.example.miguelflores.espressotest.R;
  * @author miguel.flores.
  */
 public class IdlingResourcesActivity extends AppCompatActivity {
+
+    private static final String IDLING_THREAD = "IDLING_THREAD";
+    private CountingIdlingResource countingIdlingResource = new CountingIdlingResource(IDLING_THREAD);
 
     private TextView textView;
 
@@ -67,6 +71,7 @@ public class IdlingResourcesActivity extends AppCompatActivity {
     }
 
     private void handleButtonTwoClicked() {
+        countingIdlingResource.increment();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -79,9 +84,14 @@ public class IdlingResourcesActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         textView.setText(R.string.thread_completed);
+                        countingIdlingResource.decrement();
                     }
                 });
             }
         }).start();
+    }
+
+    public CountingIdlingResource getCountingIdlingResource() {
+        return countingIdlingResource;
     }
 }
