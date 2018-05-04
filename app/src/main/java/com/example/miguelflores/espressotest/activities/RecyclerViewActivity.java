@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.miguelflores.espressotest.R;
@@ -58,6 +59,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements MyAdapter
 
     @Override
     public void onItemSelected(MyTestItem myTestItem) {
-        textViewSelection.setText(myTestItem.getText());
+        textViewSelection.setText(new String(myTestItem.getText()));
+        Log.d("MIRA", textViewSelection.getText().toString());
     }
 }
