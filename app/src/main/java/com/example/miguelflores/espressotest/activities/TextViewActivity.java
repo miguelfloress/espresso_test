@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.miguelflores.espressotest.R;
+import com.example.miguelflores.espressotest.custom.MyCustomView;
 
 /**
  * Created by miguel.flores.
@@ -16,7 +17,7 @@ import com.example.miguelflores.espressotest.R;
 public class TextViewActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textViewSubtitle1;
-    private TextView textViewSubtitle2;
+    private MyCustomView myCustomView;
 
     public static Intent createIntent(Context context) {
         return new Intent(context, TextViewActivity.class);
@@ -31,8 +32,9 @@ public class TextViewActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initView() {
-        textViewSubtitle1 = (TextView) findViewById(R.id.textViewHideSubtitle1);
-        textViewSubtitle2 = (TextView) findViewById(R.id.textViewHideSubtitle2);
+        textViewSubtitle1 = findViewById(R.id.textViewHideSubtitle1);
+        myCustomView = findViewById(R.id.myCustomView);
+        myCustomView.fill("12345");
     }
 
     private void initListeners() {

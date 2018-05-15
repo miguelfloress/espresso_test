@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.support.test.espresso.matcher.BoundedMatcher;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,11 +16,12 @@ import org.hamcrest.TypeSafeMatcher;
  * Created by miguel.flores
  */
 public class DrawableMatcher extends TypeSafeMatcher {
+    //BoundedMatcher<View,ImageView> {
 
     private int expectedId;
 
     public DrawableMatcher(int expectedId) {
-        super();
+        //super(ImageView.class);
         this.expectedId = expectedId;
     }
 

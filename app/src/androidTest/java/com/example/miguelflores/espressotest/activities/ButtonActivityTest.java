@@ -1,11 +1,13 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.espresso.assertion.PositionAssertions;
+import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.example.miguelflores.espressotest.activities.ButtonActivity;
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.base.BaseTest;
 import com.example.miguelflores.espressotest.util.MyUtilValidator;
 
@@ -39,7 +41,7 @@ public class ButtonActivityTest extends BaseTest {
 
     @Before
     public void setUp() {
-        button = onView(withId(R.id.button));
+        button = onView(ViewMatchers.withId(R.id.button));
         textView = onView(withId(R.id.textViewCounter));
     }
 
@@ -53,7 +55,9 @@ public class ButtonActivityTest extends BaseTest {
 
     @Test
     public void checkButtonClickedCounter() {
+        sleep(1000);
         button.perform(click());
+        sleep(1000);
         textView.check(matches(withText(MyUtilValidator.getResourceString(R.string.clicked, "1"))));
         textView.check(matches((withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE))));
     }
@@ -63,7 +67,13 @@ public class ButtonActivityTest extends BaseTest {
         for (int i = 0; i < 10; i++) {
             button.perform(click());
         }
+        sleep(1000);
         textView.check(matches(withText(MyUtilValidator.getResourceString(R.string.clicked, "10"))));
         textView.check(matches((withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE))));
+        sleep(1000);
+        onView(withId(R.id.textViewHidden)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        onView(withId(R.id.textViewHidden)).check(matches(withText("Hidden Property show")));
+
+        onView(withId(R.id.textViewHidden)).check(PositionAssertions.isCompletelyBelow(withId(R.id.textViewCounter)));
     }
 }

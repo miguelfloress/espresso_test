@@ -1,8 +1,10 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.base.BaseTest;
 
 import org.junit.Rule;
@@ -30,7 +32,7 @@ public class IntegrationTest extends BaseTest {
      */
     @Test
     public void checkMainViewButtons() {
-        onView(withId(R.id.buttonTextView)).check(matches(withText(R.string.button_test_text_view)));
+        onView(ViewMatchers.withId(R.id.buttonTextView)).check(matches(withText(R.string.button_test_text_view)));
     }
 
 
@@ -39,11 +41,10 @@ public class IntegrationTest extends BaseTest {
      */
     @Test
     public void tapOnTextViewButton() {
-        sleepPresentation(1000);
+        //sleepPresentation(1000);
         onView(withId(R.id.buttonTextView)).perform(click());
-        sleepPresentation(1000);
+        //sleepPresentation(1000);
         onView(withId(R.id.textViewTitle)).check(matches(isDisplayed()));
-        sleepPresentation(1000);
+        //sleepPresentation(1000);
     }
-
 }
