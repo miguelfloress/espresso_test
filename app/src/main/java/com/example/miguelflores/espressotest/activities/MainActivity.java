@@ -1,9 +1,10 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.ButtonActivity;
 import com.example.miguelflores.espressotest.activities.CheckboxActivity;
 import com.example.miguelflores.espressotest.activities.EditTextActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.buttonImageView).setOnClickListener(this);
         findViewById(R.id.buttonListView).setOnClickListener(this);
         findViewById(R.id.buttonIddlingResources).setOnClickListener(this);
+        findViewById(R.id.buttonService).setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonIddlingResources:
                 startActivity(IdlingResourcesActivity.createIntent(this));
+                break;
+            case R.id.buttonService:
+                startActivity(ServiceActivity.createIntent(this));
                 break;
         }
     }

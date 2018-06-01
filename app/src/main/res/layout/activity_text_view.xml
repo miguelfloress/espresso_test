@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent" android:layout_height="match_parent"
-              android:orientation="vertical">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView android:id="@+id/textViewDescription"
-              style="@style/DescriptionText"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="@string/desciption_text_view_example"/>
+    <TextView
+        android:id="@+id/textViewDescription"
+        style="@style/DescriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desciption_text_view_example"/>
 
-    <TextView android:id="@+id/textViewTitle"
-              style="@style/TitleText"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="@string/title_text_view_example"/>
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/title_text_view_example"/>
 
     <TextView
         android:id="@+id/textViewHideSubtitle1"
         style="@style/NormalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:text="@string/title_subtitle_1"
         android:visibility="gone"
         tools:visibility="visible"/>
@@ -33,5 +38,10 @@
         android:text="@string/title_subtitle_2"
         android:visibility="invisible"/>
 
+    <com.example.miguelflores.espressotest.custom.MyCustomView
+        android:id="@+id/myCustomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
 
 </LinearLayout>

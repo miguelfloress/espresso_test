@@ -1,9 +1,11 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.ListViewActivity;
 import com.example.miguelflores.espressotest.base.BaseTest;
 import com.example.miguelflores.espressotest.util.MyUtilValidator;
@@ -33,7 +35,7 @@ public class ListViewActivityTest extends BaseTest {
 
     @Before
     public void setUp() {
-        listView = onView(withId(R.id.listView));
+        listView = onView(ViewMatchers.withId(R.id.listView));
         textViewSelection = onView(withId(R.id.textView_selection));
     }
 

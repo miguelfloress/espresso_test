@@ -17,6 +17,7 @@ public class ButtonActivity extends AppCompatActivity {
 
     private Button button;
     private TextView textView;
+    private TextView textViewHidden;
 
     private int count;
 
@@ -35,6 +36,7 @@ public class ButtonActivity extends AppCompatActivity {
     private void init() {
         button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textViewCounter);
+        textViewHidden = findViewById(R.id.textViewHidden);
     }
 
     private void initListeners() {
@@ -44,6 +46,10 @@ public class ButtonActivity extends AppCompatActivity {
                 count++;
                 textView.setText(getString(R.string.clicked, String.valueOf(count)));
                 textView.setVisibility(View.VISIBLE);
+                if (count >= 10) {
+                    textViewHidden.setVisibility(View.VISIBLE);
+                    textViewHidden.setText("Hidden Property show");
+                }
             }
         });
     }

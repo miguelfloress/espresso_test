@@ -50,6 +50,10 @@
             android:layout_height="wrap_content"
             android:text="@string/button_test_idle_res"/>
 
+    <Button android:id="@+id/buttonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service call"/>
 
 
 </LinearLayout>

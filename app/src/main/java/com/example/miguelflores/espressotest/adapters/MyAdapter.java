@@ -53,7 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyAdapterViewHolde
         public MyAdapterViewHolder(ViewGroup itemView) {
             super(LayoutInflater.from(itemView.getContext()).inflate(R.layout.item_recycler_test, itemView, false));
             textView = this.itemView.findViewById(R.id.textView);
-            textView.setOnClickListener(new View.OnClickListener() {
+            this.textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (listener != null && getAdapterPosition() != RecyclerView.NO_POSITION) {

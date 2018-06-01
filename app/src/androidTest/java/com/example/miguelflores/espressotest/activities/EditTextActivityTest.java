@@ -1,10 +1,11 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.EditTextActivity;
 import com.example.miguelflores.espressotest.base.BaseTest;
 
@@ -21,6 +22,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static android.support.test.espresso.action.ViewActions.*;
+import static org.hamcrest.Matchers.*;
 
 /**
  * @author miguel flores.
@@ -73,7 +75,7 @@ public class EditTextActivityTest extends BaseTest {
         text = "8";
         editText.perform(typeText(text));
         sleepPresentation(1000);
-        editText.check(matches(Matchers.not(isEnabled())));
+        editText.check(matches(not(isEnabled())));
     }
 
 }
