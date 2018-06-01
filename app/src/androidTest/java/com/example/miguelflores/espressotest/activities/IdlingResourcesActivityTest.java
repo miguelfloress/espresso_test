@@ -1,10 +1,12 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.IdlingRegistry;
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.IdlingResourcesActivity;
 
 import org.junit.Before;
@@ -32,7 +34,7 @@ public class IdlingResourcesActivityTest {
 
     @Before
     public void setUp() {
-        texView = onView(withId(R.id.textView_result));
+        texView = onView(ViewMatchers.withId(R.id.textView_result));
         buttonOne = onView(withId(R.id.buttonOne));
         buttonTwo = onView(withId(R.id.buttonTwo));
     }

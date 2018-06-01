@@ -1,11 +1,11 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.example.miguelflores.espressotest.activities.RecyclerViewActivity;
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.base.BaseTest;
 import com.example.miguelflores.espressotest.util.ListSizeMatcher;
 
@@ -54,13 +54,11 @@ public class RecyclerViewActivityTest extends BaseTest {
     }
 
     private void checkRecyclerViewSelection(int pos, String value) {
-        recyclerView.perform(RecyclerViewActions.actionOnItemAtPosition(pos,
-                performClickOnChildWithId(R.id.textView)));
+        recyclerView.perform(RecyclerViewActions.actionOnItemAtPosition(pos, performClickOnChildWithId(R.id.textView)));
 
-        /* uncomment this to show what happens
-        recyclerView.perform(RecyclerViewActions.scrollToPosition(pos))
-                    .check(matches(withId(R.id.textView))).perform(click());
-        */
+        // uncomment this to show what happens
+        //recyclerView.perform(RecyclerViewActions.actionOnItemAtPosition(pos,click()));
+
         textViewSelection.check(matches(withText(value)));
     }
 }

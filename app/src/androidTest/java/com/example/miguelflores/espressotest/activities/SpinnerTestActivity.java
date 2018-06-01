@@ -1,9 +1,10 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.SpinnerActivity;
 
 import org.junit.Before;

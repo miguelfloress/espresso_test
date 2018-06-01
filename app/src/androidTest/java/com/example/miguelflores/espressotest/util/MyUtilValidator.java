@@ -16,7 +16,7 @@ public class MyUtilValidator {
 
     public static String getResourceString(int id, String... params) {
         Context targetContext = InstrumentationRegistry.getTargetContext();
-        return targetContext.getResources().getString(id, params);
+        return targetContext.getString(id, params);
     }
 
     /**

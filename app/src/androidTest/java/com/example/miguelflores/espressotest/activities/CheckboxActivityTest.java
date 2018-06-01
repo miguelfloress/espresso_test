@@ -1,10 +1,12 @@
-package com.example.miguelflores.espressotest;
+package com.example.miguelflores.espressotest.activities;
 
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.action.ViewActions;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.miguelflores.espressotest.R;
 import com.example.miguelflores.espressotest.activities.CheckboxActivity;
 
 import org.junit.Before;
@@ -35,7 +37,7 @@ public class CheckboxActivityTest {
 
     @Before
     public void setUp() {
-        checkbox = onView(withId(R.id.checkbox));
+        checkbox = onView(ViewMatchers.withId(R.id.checkbox));
         textViewSelection = onView(withId(R.id.textView_label));
     }
 
