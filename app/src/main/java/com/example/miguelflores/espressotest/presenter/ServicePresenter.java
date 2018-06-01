@@ -24,6 +24,7 @@ public class ServicePresenter {
     }
 
     public void fireService() {
+        myService = new MyService();
         myService.callService(new ServiceCallback<ResponseBody>() {
             @Override
             public void onResponse(ResponseBody response) {

@@ -18,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activities.FirstActivity">
+
+        </activity>
+
         <activity android:name=".activities.TextViewActivity"/>
         <activity android:name=".activities.ServiceActivity"/>
         <activity android:name=".activities.EditTextActivity"/>

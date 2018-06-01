@@ -70,11 +70,4 @@ public class TextViewActivityTest extends BaseTest {
         onView(withId(R.id.textViewHideSubtitle1)).check(matches(withText(R.string.title_subtitle_1)));
         onView(withId(R.id.textViewHideSubtitle2)).check(matches(withText(R.string.title_subtitle_2)));
     }
-
-
-    /*@Test
-    public void checkMyCustomView() {
-        onView(withId(R.id.myCustomView)).check(matches(new MyCustomMatcher("12345")));
-    }*/
-
 }
