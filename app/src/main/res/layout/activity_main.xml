@@ -1,59 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    >
 
-    <Button android:id="@+id/buttonTextView"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        >
+        <Button android:id="@+id/buttonTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_text_view"/>
 
-    <Button android:id="@+id/buttonEditText"
+        <Button android:id="@+id/buttonEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_edittext"/>
 
-    <Button android:id="@+id/buttonButtonText"
+        <Button android:id="@+id/buttonButtonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_button"/>
 
-    <Button android:id="@+id/buttonCheckboxText"
+        <Button android:id="@+id/buttonCheckboxText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_checkbox"/>
 
-    <Button android:id="@+id/buttonImageView"
+        <Button android:id="@+id/buttonImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_image_view"/>
 
-    <Button android:id="@+id/buttonSpinnerText"
+        <Button android:id="@+id/buttonSpinnerText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_spinner"/>
 
-    <Button android:id="@+id/buttonListView"
+        <Button android:id="@+id/buttonListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_list_view"/>
 
-    <Button android:id="@+id/buttonRecyclerView"
+        <Button android:id="@+id/buttonRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_recycler_view"/>
 
-    <Button android:id="@+id/buttonIddlingResources"
+        <Button android:id="@+id/buttonIddlingResources"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_test_idle_res"/>
 
-    <Button android:id="@+id/buttonService"
+        <Button android:id="@+id/buttonService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Service call"/>
 
+        <Button android:id="@+id/buttonBundleMock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mock bundle"/>
 
-</LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
