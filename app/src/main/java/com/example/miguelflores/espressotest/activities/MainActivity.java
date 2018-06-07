@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.buttonListView).setOnClickListener(this);
         findViewById(R.id.buttonIddlingResources).setOnClickListener(this);
         findViewById(R.id.buttonService).setOnClickListener(this);
+        findViewById(R.id.buttonBundleMock).setOnClickListener(this);
     }
 
     @Override
@@ -69,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonService:
                 startActivity(ServiceActivity.createIntent(this));
+                break;
+            case R.id.buttonBundleMock:
+                startActivity(MockBundleActivity.createIntent(this));
                 break;
         }
     }

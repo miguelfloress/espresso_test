@@ -33,6 +33,8 @@
         <activity android:name=".activities.ImageViewActivity"/>
         <activity android:name=".activities.ListViewActivity"/>
         <activity android:name=".activities.IdlingResourcesActivity"/>
+        <activity android:name=".activities.MockBundleActivity"/>
+        <activity android:name=".activities.ShowBundleActivity"/>
     </application>
 
 </manifest>
