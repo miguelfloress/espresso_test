@@ -10,8 +10,6 @@ import com.example.miguelflores.espressotest.R;
 
 public class ShowBundleActivity extends AppCompatActivity {
 
-    Bundle bundle;
-    TextView textContainer;
     public static final String KEY_BUNDLE_TEXT = "key_bundle_text";
 
 
@@ -19,8 +17,8 @@ public class ShowBundleActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_bundle);
-        textContainer = findViewById(R.id.text_container);
-        bundle = getIntent().getExtras();
+        TextView textContainer = findViewById(R.id.text_container);
+        Bundle bundle = getIntent().getExtras();
         textContainer.setText(bundle.getString(KEY_BUNDLE_TEXT));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
